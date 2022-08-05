@@ -16,7 +16,7 @@
 
 
 </head>
-<body>
+<body >
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">R&W
   </a>
@@ -66,7 +66,10 @@
      <p>Uma plataforma feita para você ler e
      <br>
     escrever histórias...</p>
+    <button type="button" class="btn btn-primary">Leia agora</button>
     </div>
+    
     </div>
+    
 </body>
 </html>
