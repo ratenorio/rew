@@ -2,11 +2,9 @@
     background-color: rgb(163, 232, 255);
     height: 800px;
 }
-h1{
+.titulo{
     text-align: center;
-    font-size: 700%;
-    line-height : 20px;
-}
+    font-family:;
 h2{
     text-align: center;
     line-height : 5px;
@@ -33,4 +31,7 @@ p{
 }
 .navbar-brand img{
     width: 80px;
+}
+.login{
+    text-align: center;
 }

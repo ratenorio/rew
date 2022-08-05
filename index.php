@@ -66,7 +66,8 @@
      <p>Uma plataforma feita para você ler e
      <br>
     escrever histórias...</p>
-    <button type="button" class="btn btn-primary">Leia agora</button>
+    <div class="login"><button type="button" class="btn btn-primary">Leia agora</button></div>
+    
     </div>
     
     </div>
