@@ -1,10 +1,15 @@
+#imagem{
+    position: relative;
+    top: -150px;
+    width: 100%;
+}
 .fundo{
     background-color: rgb(163, 232, 255);
-    height: 800px;
 }
 .titulo{
     text-align: center;
-    font-family:;
+}
+
 h2{
     text-align: center;
     line-height : 5px;
