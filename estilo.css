@@ -18,3 +18,21 @@ div img {
     font-style: oblique;
     vertical-align: text-bottom;
 }
+.container img { 
+    max-width: 350px; 
+}
+.container2 img { 
+    max-width: 400px; 
+    max-height: 400px;
+}
+.featurette-heading{
+    text-align: center;
+}
+.lead{
+    text-align: center;
+}
+.vertical { 
+    vertical-align: middle;
+    display: table-cell; 
+}
+

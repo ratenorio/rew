@@ -87,27 +87,27 @@
     <div class="area">
       <div class="row">
         <div class="col-lg-4">
-          <img class="rounded-circle" src="img/cu.png" alt="Livro image" width="170" height="170">
-          <div class="texto">
+          <img class="rounded-circle" src="img/saber1.png" alt="Generic placeholder image" width="140" height="140">
+          <div class="texto3">
             <h2 class="text-center" >Livros</h2>
-            <p class="text-center">Read and write: take your own time!</p>
-            <p><a class="btn btn-primary btn-left" href="#livros" role="button">Saber mais</a></p>
+            <p class="text-center">Leia e escreva: leve o tempo que precisar!</p>
+            <p><a class="btn btn-dark btn-left" href="#livros" role="button">Saber mais</a></p>
           </div>
         </div>
         <div class="col-lg-4">
-          <img class="rounded-circle" src="img/cu2.png" alt="Garota image" width="150" height="150">
-          <div class="texto2">
+          <img class="rounded-circle" src="img/saber2.png" alt="Generic placeholder image" width="140" height="140">
+          <div class="texto3">
             <h2 class="text-center">R&W</h2>
-            <p class="text-center">Read whenever you want, wherever you want!</p>
-            <p><a class="btn btn-primary btn-left" href="#" role="button">Saber mais</a></p>
+            <p class="text-center">Leia onde e quando quiser!</p>
+            <p><a class="btn btn-dark btn-left" href="#rew" role="button">Saber mais</a></p>
           </div>
         </div>
         <div class="col-lg-4">
-          <img class="rounded-circle" src="img/cu3.png" alt="Generic placeholder image" width="120" height="120" >
+          <img class="rounded-circle" src="img/saber3.png" alt="Generic placeholder image" width="140" height="140" >
           <div class="texto3">
             <h2 class="text-center">Fanart</h2>
-            <p class="text-center">Share your imagination and publish illustrations</p>
-            <p><a class="btn btn-primary btn-left1" href="#" role="button">Saber mais</a></p>
+            <p class="text-center">Publique ilustrações!</p>
+            <p><a class="btn btn-dark btn-left1" href="#fanart" role="button">Saber mais</a></p>
           </div>
         </div>
       </div>
@@ -125,8 +125,32 @@
             Já viram as nossas coleções? <br>
             Clique aqui e não perca mais tempo.</p>
           </div>
+
+          <!--livros carrousel-->
           <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+            <div class="container3"> 
+              <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-50" src="img/capa.jpeg" alt="Primeiro Slide" style="height: 600px; ">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-50" src="img/capa2.jpeg" alt="Segundo Slide" style="height: 600px; ">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-50" src="img/capa3.jpeg" alt="Terceiro Slide" style="height: 600px; ">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color:rgb(163, 232, 255)"></span>
+                <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true" style="background-color:rgb(163, 232, 255)"></span>
+                <span class="sr-only">Próximo</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -134,13 +158,17 @@
 
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">R&W</h2>
-            <p class="lead">Só acha a leitura perda de tempo quem ainda não aprendeu a viver com qualidade.<br>
-             Aqui você poderá ler e escrever onde quiser e quando quiser.<br> 
-            Para ler offline, baixe as histórias e aproveite.</p>
+            <div class="vertical">
+              <h2 class="featurette-heading" id="rew">R&W</h2>
+              <p class="lead">Só acha a leitura perda de tempo quem ainda não aprendeu a viver com qualidade.<br>
+              Aqui você poderá ler e escrever onde quiser e quando quiser.<br> 
+              Para ler offline, baixe as histórias e aproveite.</p>
+            </div>
           </div>
           <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image" src="img/internet.png">
+            <div class="container">
+              <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image" src="img/internet.png" width="320" height="205">
+            </div>
           </div>
         </div>
 
@@ -148,7 +176,7 @@
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">Fanart</h2>
+            <h2 class="featurette-heading" id="fanart">Fanart</h2>
             <p class="lead">Ler é formular imagens invisíveis.<br>
             Você já se prendeu tanto a uma história que sentiu como se estivesse vivendo-a?<br>
              Já imaginou os personagens e diferentes cenários presentes nas narrativas?<br>
@@ -156,7 +184,9 @@
             Para publicar e ver as fanarts, acesse o livro escolhido e entre nos comentários.</p>
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image" src="img/desenho.jpeg">
+            <div class="container2">
+              <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image" src="img/desenho.jpeg" width="320" height="205">
+            </div>
           </div>
         </div>
 
