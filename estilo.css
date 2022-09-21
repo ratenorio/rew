@@ -35,4 +35,15 @@ div img {
     vertical-align: middle;
     display: table-cell; 
 }
-
+.row featurette{
+    background-color: rgb(163, 232, 255);
+}
+.teste{
+    padding-top: 200px;
+}
+.teste2{
+    padding-top: 80px;
+}
+.teste3{
+    padding-top: 100px;
+}
