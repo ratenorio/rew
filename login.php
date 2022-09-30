@@ -12,11 +12,7 @@
          <div class="col-md-6 col-sm-12">
             <div class="login-form">
                <form>
-				   <h2>Cadastro</h2>
-			   <div class="form-group">
-                     <label>Nome de usuário</label>
-                     <input type="text" class="form-control" placeholder="Username">
-                  </div>
+				   <h2>Login</h2>
                   <div class="form-group">
                      <label>E-mail</label>
                      <input type="text" class="form-control" placeholder="E-mail">
@@ -25,8 +21,8 @@
                      <label>Senha</label>
                      <input type="password" class="form-control" placeholder="Senha">
                   </div>
-                  <button type="submit" class="btn btn-black">Cadastrar</button>
-				  Já tem uma conta? <a href="login.php" style="text-decoration: underline; color: black">Entrar</a>
+                  <button type="submit" class="btn btn-black">Entrar</button>
+                  Ainda não tem uma conta? <a href="cadastro.php" style="text-decoration: underline; color: black">Cadastrar</a>
                </form>
             </div>
          </div>

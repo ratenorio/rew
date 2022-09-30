@@ -45,13 +45,16 @@
             </div>
           </li>
           <li class="nav-item">
+            <a class="nav-link disabled" href="login.php">Entrar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="cadastro.php">Criar conta</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link disabled" href="#faleconosco">Fale conosco</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Pesquisar</button>
-        </form>
+        
       </div>
     </nav>
   </div>
@@ -170,7 +173,7 @@
                 <p class="lead">Só acha a leitura perda de tempo quem ainda não aprendeu a viver com qualidade.<br>
                 Aqui você poderá ler e escrever onde quiser e quando quiser.<br> 
                 Para ler offline, baixe as histórias e aproveite.</p>
-                <div class="botao2"><p><a class="btn btn-dark btn-left" href="cadastro.php" role="button">Leia offline</a></p></div>
+
               </div>
             </div>
           </div>
@@ -192,7 +195,6 @@
               Já imaginou os personagens e diferentes cenários presentes nas narrativas?<br>
               Não deixe tudo apenas na sua imaginação, faça ilustrações e publique em nossa plataforma.<br>
               Para publicar e ver as fanarts, acesse o livro escolhido e entre nos comentários.</p>
-              <div class="botao3"><p><a class="btn btn-dark btn-left" href="usuario_formulario.php" role="button">Publique agora</a></p></div>
             </div>
           </div>
           <div class="col-md-5">
