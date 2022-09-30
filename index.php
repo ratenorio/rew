@@ -32,7 +32,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:black;">
               Gênero
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -44,14 +44,16 @@
               <a class="dropdown-item" href="">Fanart</a>
             </div>
           </li>
+          <div class="entrar">
           <li class="nav-item">
-            <a class="nav-link disabled" href="login.php">Entrar</a>
+            <a class="nav-link disabled" href="login.php" style="color:black;">Entrar</a>
+          </li>
+          </div>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="cadastro.php" style="color:black;">Criar conta</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="cadastro.php">Criar conta</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#faleconosco">Fale conosco</a>
+            <a class="nav-link disabled" href="#faleconosco" style="color:black;">Fale conosco</a>
           </li>
         </ul>
         
