@@ -1,9 +1,9 @@
 <?php
 session_start();
-require_once '../includes/funcoes.php';
-require_once 'conexao_mysql.php';
-require_once 'sql.php';
-require_once 'mysql.php';
+require_once '../../includes/funcoes.php';
+require_once '../conexao_mysql.php';
+require_once '../sql.php';
+require_once '../mysql.php';
 $salt = '$ifsp2022';
 
 
@@ -60,7 +60,7 @@ switch($acao){
 
             $retorno = buscar(
                 'usuario',
-                ['id', 'nome', 'email', 'senha', 'adm'],
+                ['id', 'username', 'email', 'senha', 'adm'],
                 $criterio
             );
 
@@ -123,6 +123,6 @@ switch($acao){
                 exit;
                 break;
 }
-header('Location: ../index.php');
+header('Location: ../../index.php');
 
 ?>

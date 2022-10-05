@@ -39,7 +39,7 @@
                      <div class="col-md-6 col-sm-12">
                         <div class="login-form">
                            <h2>Cadastro</h2>
-                           <form  method="post" action="core/usuario_repositorio.php">
+                           <form  method="post" action="core/repositorios/usuario_repositorio.php">
                            <input  type="hidden" name="acao"
                                 value="<?php echo empty($id) ? 'insert' : 'update' ?>">
                            <input type="hidden" name="id"
@@ -63,10 +63,10 @@
                             <input  class="form-control" type="password"
                                 require="required" id="senha" name="senha">
                         </div>
+                        
+                        <?php endif; ?>
                         <button type="submit" class="btn btn-black">Cadastrar</button>
                         Já tem uma conta? <a href="login.php" style="text-decoration: underline; color: black">Entrar</a>
-                        <?php endif; ?>
-                        
                     </form>
                 </div>
             </div>
