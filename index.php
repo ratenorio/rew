@@ -133,14 +133,14 @@
             <p class="lead">Essa plataforma permite que você possa ler e se tornar autor de suas próprias histórias.<br>
             Já viram as nossas coleções? <br>
             Clique aqui e não perca mais tempo.</p>
-            <div class="botao1"><p><a class="btn btn-dark btn-left" href="usuario_formulario.php" role="button">Leia agora</a></p></div>
+            <div class="botao1"><p><a class="btn btn-dark btn-left" href="livros.php" role="button">Leia agora</a></p></div>
             </div>
           </div>
 
           <!--livros carrousel-->
           <div class="col-md-5">
             <div class="container3"> 
-              <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+              <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <img class="d-block w-50" src="img/capa.jpeg" alt="First slide" style="height: 600px; ">
@@ -152,11 +152,11 @@
                     <img class="d-block w-50" src="img/capa3.jpeg" alt="Third slide" style="height: 600px; ">
                   </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color:rgb(163, 232, 255)"></span>
                 <span class="sr-only">Anterior</span>
                 </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true" style="background-color:rgb(163, 232, 255)"></span>
                 <span class="sr-only">Próximo</span>
                 </a>

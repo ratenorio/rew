@@ -11,7 +11,7 @@
       <div class="main">
          <div class="col-md-6 col-sm-12">
             <div class="login-form">
-               <form>
+               <form method="post" action="core/usuario_repositorio.php">
 				   <h2>Login</h2>
                   <div class="form-group">
                      <label>E-mail</label>

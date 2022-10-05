@@ -1,5 +1,5 @@
 create database rew;
-use rew;,
+use rew;
 
 CREATE TABLE Livro (
     cod_livro int PRIMARY KEY,
@@ -8,107 +8,110 @@ CREATE TABLE Livro (
     data_publicacao int,
     qtd_capitulo int,
     sinopse text,
-    fk_Usuario_cod_usuario int,
-    fk_genero_cod_genero int
+    cod_usuario int,
+    cod_genero int
 );
 
 CREATE TABLE Usuario (
-    cod_usuario int PRIMARY KEY,
+    cod_usuario int PRIMARY KEY AUTO_INCREMENT,
     email varchar(255),
     senha varchar(10),
     username varchar(50),
-    biografia varchar(255)
+    biografia varchar(255), 
+    foto blob
 );
 
-CREATE TABLE _comenta (
-    cod_comentario int PRIMARY KEY,
-    fk_Usuario_cod_usuario int,
-    fk_Livro_cod_livro int,
+CREATE TABLE Comenta (
+    cod_comentario int PRIMARY KEY AUTO_INCREMENT,
+    cod_usuario int,
+    cod_livro int,
     comentario varchar(255),
     fanart varchar(255)
 );
 
-CREATE TABLE genero (
-    cod_genero int PRIMARY KEY,
+CREATE TABLE Genero (
+    cod_genero int PRIMARY KEY AUTO_INCREMENT,
     descricao varchar(255),
     nome varchar(50)
 );
 
-CREATE TABLE capitulos (
-    capitulo int,
+CREATE TABLE Capitulos (
+    cod_capitulo int PRIMARY KEY AUTO_INCREMENT,
     titulo varchar(50),
     texto mediumtext,
-    fk_Livro_cod_livro int,
-    PRIMARY KEY (capitulo, fk_Livro_cod_livro)
+    cod_livro int    
 );
 
-CREATE TABLE le (
-    fk_Livro_cod_livro int,
-    fk_Usuario_cod_usuario int,
+CREATE TABLE Le (
+    cod_le int PRIMARY KEY AUTO_INCREMENT,
+    cod_livro int,
+    cod_usuario int,
     continuar_lendo int,
     lista_de_interesses int
 );
 
-CREATE TABLE avalia (
-    fk_Usuario_cod_usuario int,
-    fk_Livro_cod_livro int,
+CREATE TABLE Avalia (
+    cod_avalia int PRIMARY KEY AUTO_INCREMENT,
+    cod_usuario int,
+    cod_livro int,
     estrelas int
 );
 
-CREATE TABLE denuncia (
-    fk_Usuario_cod_usuario int,
-    fk__comenta_cod_comentario int
+CREATE TABLE Denuncia (
+    cod_denuncia int PRIMARY KEY AUTO_INCREMENT,
+    cod_usuario int,
+    cod_comentario int
 );
  
-ALTER TABLE Livro ADD CONSTRAINT FK_Livro_2
-    FOREIGN KEY (fk_Usuario_cod_usuario)
+ALTER TABLE Livro ADD CONSTRAINT FK_Livro_Usuario
+    FOREIGN KEY (cod_usuario)
     REFERENCES Usuario (cod_usuario)
     ON DELETE RESTRICT;
  
-ALTER TABLE Livro ADD CONSTRAINT FK_Livro_3
-    FOREIGN KEY (fk_genero_cod_genero)
+ALTER TABLE Livro ADD CONSTRAINT FK_Livro_Genero
+    FOREIGN KEY (cod_genero)
     REFERENCES genero (cod_genero)
     ON DELETE CASCADE;
  
-ALTER TABLE _comenta ADD CONSTRAINT FK__comenta_2
-    FOREIGN KEY (fk_Usuario_cod_usuario)
+ALTER TABLE Comenta ADD CONSTRAINT FK_comenta_Usuario
+    FOREIGN KEY (cod_usuario)
     REFERENCES Usuario (cod_usuario);
  
-ALTER TABLE _comenta ADD CONSTRAINT FK__comenta_3
-    FOREIGN KEY (fk_Livro_cod_livro)
+ALTER TABLE Comenta ADD CONSTRAINT FK_Comenta_Livro
+    FOREIGN KEY (cod_livro)
     REFERENCES Livro (cod_livro);
  
-ALTER TABLE capitulos ADD CONSTRAINT FK_capitulos_2
-    FOREIGN KEY (fk_Livro_cod_livro)
+ALTER TABLE Capitulos ADD CONSTRAINT FK_Capitulos_Livro
+    FOREIGN KEY (cod_livro)
     REFERENCES Livro (cod_livro)
     ON DELETE RESTRICT;
  
-ALTER TABLE le ADD CONSTRAINT FK_le_1
-    FOREIGN KEY (fk_Livro_cod_livro)
+ALTER TABLE Le ADD CONSTRAINT FK_Le_Livro
+    FOREIGN KEY (cod_livro)
     REFERENCES Livro (cod_livro)
     ON DELETE SET NULL;
  
-ALTER TABLE le ADD CONSTRAINT FK_le_2
-    FOREIGN KEY (fk_Usuario_cod_usuario)
+ALTER TABLE Le ADD CONSTRAINT FK_Le_Usuario
+    FOREIGN KEY (cod_usuario)
     REFERENCES Usuario (cod_usuario)
     ON DELETE SET NULL;
  
-ALTER TABLE avalia ADD CONSTRAINT FK_avalia_1
-    FOREIGN KEY (fk_Usuario_cod_usuario)
+ALTER TABLE Avalia ADD CONSTRAINT FK_Avalia_Usuario
+    FOREIGN KEY (cod_usuario)
     REFERENCES Usuario (cod_usuario)
     ON DELETE SET NULL;
  
-ALTER TABLE avalia ADD CONSTRAINT FK_avalia_2
-    FOREIGN KEY (fk_Livro_cod_livro)
+ALTER TABLE Avalia ADD CONSTRAINT FK_Avalia_Livro
+    FOREIGN KEY (cod_livro)
     REFERENCES Livro (cod_livro)
     ON DELETE SET NULL;
  
-ALTER TABLE denuncia ADD CONSTRAINT FK_denuncia_1
-    FOREIGN KEY (fk_Usuario_cod_usuario)
+ALTER TABLE Denuncia ADD CONSTRAINT FK_Denuncia_Usuario
+    FOREIGN KEY (cod_usuario)
     REFERENCES Usuario (cod_usuario)
     ON DELETE RESTRICT;
  
-ALTER TABLE denuncia ADD CONSTRAINT FK_denuncia_2
-    FOREIGN KEY (fk__comenta_cod_comentario)
-    REFERENCES _comenta (cod_comentario)
+ALTER TABLE Denuncia ADD CONSTRAINT FK_Denuncia_Comenta
+    FOREIGN KEY (cod_comentario)
+    REFERENCES Comenta (cod_comentario)
     ON DELETE RESTRICT;
