@@ -25,7 +25,7 @@
   <!-- Navbar  -->
   <div class="container-fluid ">
     <nav class="navbar navbar-expand-lg navbar-light bg-light " style="box-shadow: 2px 2px 2px #bbb;">
-      <a class="navbar-brand" href="">R&W</a>
+      <a class="navbar-brand">R&W</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -41,7 +41,7 @@
               <a class="dropdown-item" href="">Terror</a>
               <a class="dropdown-item" href="">Poema</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="">Fanart</a>
+              <a class="dropdown-item" href="">Outros</a>
             </div>
           </li>
           <div class="entrar">
