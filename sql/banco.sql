@@ -2,14 +2,15 @@ create database rew;
 use rew;
 
 CREATE TABLE Livro (
-    cod_livro int PRIMARY KEY,
+    cod_livro int PRIMARY KEY AUTO_INCREMENT,
     nome varchar(50),
     autor varchar(50),
     data_publicacao int,
     qtd_capitulo int,
     sinopse text,
     cod_usuario int,
-    cod_genero int
+    cod_genero int,
+    foto varchar(100)
 );
 
 CREATE TABLE Usuario (
@@ -31,7 +32,6 @@ CREATE TABLE Comenta (
 
 CREATE TABLE Genero (
     cod_genero int PRIMARY KEY AUTO_INCREMENT,
-    descricao varchar(255),
     nome varchar(50)
 );
 
@@ -115,3 +115,11 @@ ALTER TABLE Denuncia ADD CONSTRAINT FK_Denuncia_Comenta
     FOREIGN KEY (cod_comentario)
     REFERENCES Comenta (cod_comentario)
     ON DELETE RESTRICT;
+
+
+
+insert into genero(nome) values('romance');
+insert into genero(nome) values('fantasia');
+insert into genero(nome) values('terror');
+insert into genero(nome) values('poema');
+insert into genero(nome) values('outros');

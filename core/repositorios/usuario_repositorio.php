@@ -54,17 +54,19 @@ switch($acao){
             break;
         case 'login':
             $criterio = [
-                ['email', '=', $email],
-                ['AND', 'ativo', '=', 1]
+                ['email', '=', $email]
+                
             ];
+            
 
             $retorno = buscar(
                 'usuario',
-                ['id', 'username', 'email', 'senha', 'adm'],
+                ['cod_usuario', 'username', 'email', 'senha'],
                 $criterio
             );
-
+            
             if(count($retorno)>0){
+                
                 if(crypt($senha, $salt) == $retorno[0]['senha']){
                     $_SESSION['login']['usuario'] = $retorno[0];
                     if(!empty($_SESSION['url_retorno'])){
@@ -74,7 +76,9 @@ switch($acao){
                     }
                 }
             }
-            
+
+            header('Location: ../../tela_logada.php');
+            exit;
             break;
         case 'logout':
             session_destroy();

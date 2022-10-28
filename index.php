@@ -31,19 +31,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:black;">
-              Gênero
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="genero/romance.php">Romance</a>
-              <a class="dropdown-item" href="">Fantasia</a>
-              <a class="dropdown-item" href="">Terror</a>
-              <a class="dropdown-item" href="">Poema</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="">Outros</a>
-            </div>
-          </li>
+          
           <div class="entrar">
           <li class="nav-item">
             <a class="nav-link disabled" href="login.php" style="color:black;">Entrar</a>

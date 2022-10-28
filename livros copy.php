@@ -104,48 +104,7 @@
 
       <div class="album py-5 bg-light w-75 p-3" style="margin-left: 15%;">
         <div class="container">
-          <?php
-                require_once 'includes/funcoes.php';
-                require_once 'core/conexao_mysql.php';
-                require_once 'core/sql.php';
-                require_once 'core/mysql.php';
 
-                foreach($_GET as $indice => $dado){
-                    $$indice = limparDados($dado);
-                }
-                
-                $livros = buscar(
-                            'livro',
-                            ['*'],
-                            []);
-                
-                
-                
-          ?>
-          <div class="row">
-          <?php
-              foreach($livros as $livro):
-          ?>          
-
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src=<?php echo "imagens/".$livro['foto']?> alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text"><?php echo $livro['sinopse']?></p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Ler</button>
-                    </div>
-                   
-                  </div>
-                </div>
-              </div>
-            </div>
-          <?php endforeach; ?>
-          </div>  
-
-
-          <!--
           <div class="row">
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
@@ -320,7 +279,6 @@
           </div>
         </div>
       </div>
-      -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
