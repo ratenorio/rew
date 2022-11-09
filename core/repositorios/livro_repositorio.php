@@ -66,6 +66,6 @@ switch($acao){
 
             break;       
     }
-header('Location: ../../tela_logada.php');
+header('Location: ../../index.php');
 
 ?>

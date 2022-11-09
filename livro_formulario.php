@@ -111,7 +111,7 @@
                     </div>   
                     <div class="text-right">
                         <button class="btn btn-success"
-                                 type="submit">Salvar</button>
+                                 type="submit">Próximo</button>
                     </div>
                 </form>
             </div>

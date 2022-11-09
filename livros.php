@@ -29,43 +29,7 @@
 
 <body>
 
-<div class="container-fluid ">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light " style="box-shadow: 2px 2px 2px #bbb;">
-      <a class="navbar-brand">R&W</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:black;">
-              Gênero
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="genero/romance.php">Romance</a>
-              <a class="dropdown-item" href="">Fantasia</a>
-              <a class="dropdown-item" href="">Terror</a>
-              <a class="dropdown-item" href="">Poema</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="">Outros</a>
-            </div>
-          </li>
-          <div class="entrar">
-          <li class="nav-item">
-            <a class="nav-link disabled" href="login.php" style="color:black; background-color:rgb(163, 232, 255);border-radius: 10px 20px;">Entrar</a>
-          </li>
-          </div>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="cadastro.php" style="color:black;">Criar conta</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#faleconosco" style="color:black;">Fale conosco</a>
-          </li>
-        </ul>
-        
-      </div>
-    </nav>
-  </div>
+
 
 <div class="container-fluid" style="background-color: rgb(163, 232, 255) ;">
 <!doctype html>
@@ -333,9 +297,6 @@
     
     </main>
 
-    <?php
-        include 'includes/rodape.php';
-    ?>
   </body>
   
 </html>

@@ -16,7 +16,7 @@ CREATE TABLE Livro (
 CREATE TABLE Usuario (
     cod_usuario int PRIMARY KEY AUTO_INCREMENT,
     email varchar(255),
-    senha varchar(10),
+    senha varchar(100),
     username varchar(50),
     biografia varchar(255), 
     foto blob

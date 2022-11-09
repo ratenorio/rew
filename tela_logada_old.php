@@ -27,6 +27,10 @@
 
 <body>
 
+<?php
+    include 'includes/valida_login.php';
+?>
+
 
 <nav class="navbar navbar-expand-lg" >
   <a class="navbar-brand">R&W</a>

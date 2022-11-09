@@ -4,7 +4,7 @@ require_once '../../includes/funcoes.php';
 require_once '../conexao_mysql.php';
 require_once '../sql.php';
 require_once '../mysql.php';
-$salt = '$ifsp2022';
+$salt = 'ifsp';
 
 
 foreach($_POST as $indice => $dado){
@@ -65,7 +65,9 @@ switch($acao){
                 $criterio
             );
             
+            
             if(count($retorno)>0){
+                
                 
                 if(crypt($senha, $salt) == $retorno[0]['senha']){
                     $_SESSION['login']['usuario'] = $retorno[0];
@@ -75,10 +77,8 @@ switch($acao){
                         exit;
                     }
                 }
-            }
+            }            
 
-            header('Location: ../../tela_logada.php');
-            exit;
             break;
         case 'logout':
             session_destroy();
