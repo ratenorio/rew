@@ -119,7 +119,7 @@ CREATE TABLE `livro` (
   `cod_livro` int(11) NOT NULL,
   `nome` varchar(50) DEFAULT NULL,
   `autor` varchar(50) DEFAULT NULL,
-  `data_publicacao` int(11) DEFAULT NULL,
+  `data_publicacao` datetime  DEFAULT NULL,
   `qtd_capitulo` int(11) DEFAULT NULL,
   `sinopse` text DEFAULT NULL,
   `cod_usuario` int(11) DEFAULT NULL,
@@ -132,9 +132,9 @@ CREATE TABLE `livro` (
 --
 
 INSERT INTO `livro` (`cod_livro`, `nome`, `autor`, `data_publicacao`, `qtd_capitulo`, `sinopse`, `cod_usuario`, `cod_genero`, `foto`) VALUES
-(1, 'Top 1', 'Ana Laura Araujo Dos Santos', 2022, NULL, '&quot;Nunca foi a inten&ccedil;&atilde;o me apaixonar, mas desde a primeira vez quando sentei atr&aacute;s dela na sala ela me fez uma simples uma piada e logo me apaixono...&quot;                                                    ', 1, 1, '2022.11.16-13.56.31jpeg'),
-(2, 'A rosa', 'Gabriela Frances', 2022, NULL, '&quot;Voc&ecirc; fez de mim uma rosa, eu fui dentre todas as outras rosas a que mais te chamou aten&ccedil;&atilde;o...&quot;                                                    ', 1, 4, '2022.11.16-13.58.22jpeg'),
-(3, 'Bolha', 'Jo&atilde;o Vitor de Moraes Torres', 2022, NULL, '&quot;Pois a bolha que eu tanto amei, me fez mais feliz quando me libertei...&quot;                                                    ', 1, 4, '2022.11.16-13.59.27jpeg');
+(1, 'Top 1', 'Ana Laura Araujo Dos Santos', 2022, '2022-11-16', '&quot;Nunca foi a inten&ccedil;&atilde;o me apaixonar, mas desde a primeira vez quando sentei atr&aacute;s dela na sala ela me fez uma simples uma piada e logo me apaixono...&quot;                                                    ', 1, 1, '2022.11.16-13.56.31jpeg'),
+(2, 'A rosa', 'Gabriela Frances', 2022, '2022-11-16', '&quot;Voc&ecirc; fez de mim uma rosa, eu fui dentre todas as outras rosas a que mais te chamou aten&ccedil;&atilde;o...&quot;                                                    ', 1, 4, '2022.11.16-13.58.22jpeg'),
+(3, 'Bolha', 'Jo&atilde;o Vitor de Moraes Torres', 2022, '2022-11-16', '&quot;Pois a bolha que eu tanto amei, me fez mais feliz quando me libertei...&quot;                                                    ', 1, 4, '2022.11.16-13.59.27jpeg');
 
 -- --------------------------------------------------------
 

@@ -41,11 +41,11 @@
                         $id = (int)$id;
 
                         $criterio = [
-                                ['id', '=', $id]
+                                ['cod_livro', '=', $id]
                         ];
 
                         $retorno = buscar(
-                            'post',
+                            'livro',
                             ['*'],
                             $criterio
                         );
@@ -58,7 +58,7 @@
                     <input type="hidden" name="acao"
                             value="<?php echo empty($id) ? 'insert' : 'update' ?>">
                     <input type="hidden" name="id"
-                            value="<?php echo $entidade['id'] ?? '' ?>">
+                            value="<?php echo $entidade['cod_livro'] ?? '' ?>">
                     <div class="form-group">
                         <label for="nome">Nome:</label>
                         <input class="form-control" type="text"
@@ -84,14 +84,14 @@
                         <label for="texto">Sinopse:</label>
                         <textarea class="form-control" type="text"
                             require="required" id="texto" name="sinopse" rows="5">
-                            <?php echo $entidade['texto'] ?? '' ?>
+                            <?php echo $entidade['sinopse'] ?? '' ?>
                         </textarea>
                     </div>
                     <div class="form-group">
                         <label for="texto">Data Publicação:</label>
                         <?php
                             $data = (!empty($entidade['data_publicacao']))?
-                                explode('', $entidade['data_publicacao'])[0] : '';
+                                explode(' ', $entidade['data_publicacao'])[0] : '';
 
                         ?>
                         <div class="row">

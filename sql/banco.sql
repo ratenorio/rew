@@ -5,7 +5,7 @@ CREATE TABLE Livro (
     cod_livro int PRIMARY KEY AUTO_INCREMENT,
     nome varchar(50),
     autor varchar(50),
-    data_publicacao int,
+    data_publicacao datetime,
     qtd_capitulo int,
     sinopse text,
     cod_usuario int,

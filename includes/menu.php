@@ -48,6 +48,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="livro_formulario.php">Novo livro</a>
+              <a class="dropdown-item" href="listagem_livros.php">Meus Livros</a>
             </div>
           </li>
     </ul>

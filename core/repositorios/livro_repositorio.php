@@ -49,17 +49,21 @@ switch($acao){
         case 'update':
             $id = (int)$id;
             $dados = [
-                'nome'  =>$nome,
-                'email' =>$email,
-                'biografia' =>$biografia
+                'nome'  => $nome,
+                'autor' => $autor,
+                'sinopse' => $sinopse,
+                'data_publicacao' => $data_publicacao,
+                'cod_usuario'    => $_SESSION['login']['usuario']['cod_usuario'],
+                'cod_genero'    => $cod_genero,
+                'foto'      => $foto_name
             ];
 
             $criterio = [
-                ['id', '=', $id]
+                ['cod_livro', '=', $id]
             ];
 
             atualiza(
-                'usuario',
+                'livro',
                 $dados,
                 $criterio
             );
