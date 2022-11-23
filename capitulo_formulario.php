@@ -5,8 +5,18 @@
 <html>
     <head>
         <title>Cadastro de Capítulo </title>
-        <link rel="stylesheet"
-              href="lib/bootstrap-4.2.1-dist/css/bootstrap.min.css">
+        <link rel="stylesheet"href="lib/bootstrap-4.2.1-dist/css/bootstrap.min.css">
+        <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+            <script>
+            tinymce.init({
+                selector: 'textarea#editor',
+                skin: 'bootstrap',
+                plugins: 'lists, link, image, media',
+                toolbar: 'h1 h2 bold italic strikethrough blockquote bullist numlist backcolor | link image media | removeformat help',
+                menubar: false,
+            });
+            </script>        
     </head>
     <body>
         <div class="container">
@@ -64,12 +74,18 @@
                             require="required" id="titulo" name="titulo"
                             value="<?php echo $entidade['titulo'] ?? '' ?>">
                     </div>
-                  
+                  <!--
                     <div class="form-group">
                         <label for="texto">Texto:</label>
                         <textarea class="form-control" type="text"
                             require="required" id="texto" name="texto" rows="5">
                             <?php echo $entidade['texto'] ?? '' ?>
+                        </textarea>
+                    </div>
+                -->
+                    <div class="form-group">
+                        <textarea id="editor" name="editor">
+                        <?php echo $entidade['texto'] ?? '' ?>
                         </textarea>
                     </div>
                     <div class="text-right">

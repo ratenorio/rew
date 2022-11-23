@@ -18,11 +18,10 @@ switch($acao){
     case 'insert' :
         $dados = [
             'titulo'  => $titulo,
-            'texto' => $texto,
+            'texto' => $editor,
             'cod_livro' => $cod_livro,
-        ];
+        ];      
         
-        print_r($dados);
 
         insere(
             'capitulos',
@@ -35,10 +34,8 @@ switch($acao){
             $id = (int)$id;
             $dados = [
                 'titulo'  => $titulo,
-                'texto' => $texto,
-                'cod_livro' => $cod_livro,
+                'texto' => $editor
             ];          
-    
 
             $criterio = [
                 ['cod_capitulo', '=', $id]

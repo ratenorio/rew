@@ -107,6 +107,7 @@
             </div>
         </div>
     </div>
-    <script src="lib/bootstrap-4.2.1-dist/js/bootstrap.min.js"></script>
+    <script src="lib/bootstrap-4.2.1-dist/js/jquery-3.6.1.min.js"></script>
+    <script src="lib/bootstrap-4.2.1-dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

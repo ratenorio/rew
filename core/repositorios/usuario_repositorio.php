@@ -30,7 +30,8 @@ switch($acao){
             'usuario',
             $dados
         );
-
+        header('Location: ../../login.php');
+        exit;
         break;
 
         case 'update':

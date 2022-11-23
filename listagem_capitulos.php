@@ -19,8 +19,8 @@
                         include 'includes/valida_login.php';
                     ?>
                 </div>
-                <div class="col-md-10" style="padding-top: 50px;">
-                <h2>Usuário</h2>
+                <div class="col-md-12" style="padding-top: 50px;">
+                <h2>Capítulos</h2>
                 <?php
                     require_once 'includes/funcoes.php';
                     require_once 'core/conexao_mysql.php';
@@ -31,10 +31,17 @@
                         $$indice = limparDados($dado);
                     }
 
+                    $livros = buscar(
+                        'livro',
+                        ['*'],
+                        [['cod_livro', '=', $id]]);
+
+                    echo "<h1> Livro: ". $livros[0]['nome'] ."</h1>";
+
                     $data_atual = date('Y-m-d H:i:s');
 
                     $criterio = [];
-                    $criterio[] = ['cod_usuario', '=',$_SESSION['login']['usuario']['cod_usuario']];
+                    $criterio[] = ['cod_livro', '=', $id];
 
                     if(!empty($busca)){
                         $criterio[] = ['titulo', 'like', "%{$busca}%"];
@@ -43,13 +50,12 @@
 
 
                     $result = buscar(
-                        'capitulo
+                        'capitulos
                         ',
                         [
                             'cod_capitulo',
                             'titulo',
-                            'texto',
-                            '(select count(*) qtd from capitulos c where  c.cod_livro = livro.cod_livro) as qtd'                            
+                            'texto'                            
                         ],
                         $criterio,
                         'cod_capitulo asc'
@@ -68,17 +74,16 @@
                     <tbody>
                         <?php
                             foreach($result as $entidade):
-                                $data = date_create($entidade['data_publicacao']);
-                                $data = date_format($data, 'd/m/Y H:i:s');
+                                
                         ?>
                         <tr>
                             <td><?php  echo  $entidade['cod_capitulo'] ?></td>
 
                             <td><?php echo $entidade['titulo'] ?></td>
-                            <td><?php echo $entidade['Editar'] ?></td>
-                            <td><?php echo $data?></td>
-                            <td><a href='capitulo_formulario.php?id=<?php echo $entidade['cod_livro']?>
-                            '>Editar</a></td>                           
+                            <!--<td><?php echo $entidade['Editar'] ?></td>-->                            
+                            <td><a href='capitulo_formulario.php?id=<?php echo $entidade['cod_capitulo']?>
+                            '>Editar</a></td> 
+                            <td><?php echo $entidade['titulo'] ?></td>                          
                             
                         </tr>
                         <?php endforeach; ?>

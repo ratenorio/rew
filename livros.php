@@ -1,43 +1,9 @@
 <html>
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-
-    <style>
-        
-        .content input {
-        border-radius: 20px;
-        background: rgb(163, 232, 255);
-        padding: 10px;
-        width: 70%;
-        border: none;
-        margin-right: 10px;
-        }
-        .card{
-          height: 800px;
-        }
-        .card1{
-          height: 200px;
-        }
-
-    </style>
-
- 
-
 <body>
 
-
-
-<div class="container-fluid" style="background-color: rgb(163, 232, 255) ;">
 <!doctype html>
 <html lang="en">
-  <head>
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -82,9 +48,6 @@
                             'livro',
                             ['*'],
                             []);
-                
-                
-                
           ?>
           <div class="row">
           <?php
@@ -98,7 +61,7 @@
                   <p class="card-text"><?php echo $livro['sinopse']?></p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Ler</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary"><a href="<?php echo 'ler_livro.php?id='. $livro['cod_livro']?>">Ler</button></a>
                     </div>
                    
                   </div>
