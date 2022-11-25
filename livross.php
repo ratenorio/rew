@@ -1,18 +1,45 @@
 <html>
 
-<body>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
+
+    <style>
+        
+        .content input {
+        border-radius: 20px;
+        background: rgb(163, 232, 255);
+        padding: 10px;
+        width: 70%;
+        border: none;
+        margin-right: 10px;
+        }
+        .card{
+          height: 800px;
+        }
+        .card1{
+          height: 200px;
+        }
+
+    </style>
+
+
+
+<div class="container-fluid" style="background-color: rgb(163, 232, 255) ;">
 <!doctype html>
 <html lang="en">
+  <head>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
     <link rel="stylesheet" href="estilo_livro.css">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
     <title>Album example for Bootstrap</title>
 
@@ -37,7 +64,9 @@
 
       <div class="album py-5 bg-light w-75 p-3" style="margin-left: 15%;">
         <div class="container">
-          <?php
+        <div class="row">
+
+                    <?php
                 require_once 'includes/funcoes.php';
                 require_once 'core/conexao_mysql.php';
                 require_once 'core/sql.php';
@@ -73,6 +102,8 @@
             </div>
           <?php endforeach; ?>
           </div>  
+
+        </div>  
 
 
           <!--
@@ -267,10 +298,3 @@
   
 </html>
  
-
-
-
-
-
-
-

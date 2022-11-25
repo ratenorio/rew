@@ -30,7 +30,7 @@
                     foreach($_GET as $indice => $dado){
                         $$indice = limparDados($dado);
                     }
-
+                    $id = 1;
                     $livros = buscar(
                         'livro',
                         ['*'],
@@ -60,6 +60,7 @@
                         $criterio,
                         'cod_capitulo asc'
                     );
+                    
 
                 ?>
                 <table class="table table-bordered table-hover table stripped
@@ -69,6 +70,7 @@
                             <td>Código</td>
                             <td>Titulo</td>
                             <td>Editar</td>
+                            <td>Excluir</td>
 
                     </thead>
                     <tbody>
@@ -81,10 +83,9 @@
 
                             <td><?php echo $entidade['titulo'] ?></td>
                             <!--<td><?php echo $entidade['Editar'] ?></td>-->                            
-                            <td><a href='capitulo_formulario.php?id=<?php echo $entidade['cod_capitulo']?>
-                            '>Editar</a></td> 
-                            <td><?php echo $entidade['titulo'] ?></td>                          
-                            
+                            <td><a href='capitulo_formulario.php?id=<?php echo $entidade['cod_capitulo']?>'>Editar</a></td>                     
+                            <td><a href='excluir_capitulo.php?cod_capitulo=<?php echo $entidade['cod_capitulo']?>'>Excluir</a></td>
+
                         </tr>
                         <?php endforeach; ?>
                     </tbody>

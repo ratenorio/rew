@@ -10,6 +10,9 @@
     <title>Document</title>
 </head>
 <body>
+            <?php
+            include 'includes/valida_login.php';
+            ?>
 
     <?php
         require_once 'includes/funcoes.php';
@@ -20,7 +23,6 @@
         foreach($_GET as $indice => $dado){
             $$indice = limparDados($dado);
         }
-    
         $criterio = [['cod_livro', '=', $id]];
 
         $livro = buscar(
