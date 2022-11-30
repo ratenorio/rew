@@ -30,24 +30,38 @@ switch($acao){
 
         break;
 
-        case 'update':
-            $id = (int)$id;
-            $dados = [
-                'titulo'  => $titulo,
-                'texto' => $editor
-            ];          
+    case 'update':
+        $id = (int)$id;
+        $dados = [
+            'titulo'  => $titulo,
+            'texto' => $editor
+        ];          
 
-            $criterio = [
-                ['cod_capitulo', '=', $id]
-            ];
+        $criterio = [
+            ['cod_capitulo', '=', $id]
+        ];
 
-            atualiza(
-                'capitulos',
-                $dados,
-                $criterio
-            );
+        atualiza(
+            'capitulos',
+            $dados,
+            $criterio
+        );
 
-            break;       
+        break;    
+
+    case 'deleta':
+        $id = (int)$id;        
+
+        $criterio = [
+            ['cod_capitulo', '=', $id]
+        ];
+
+        deleta(
+            'capitulos', 
+            $criterio
+        );  
+        break;      
+
     }
 header('Location: ../../listagem_livros.php');
 

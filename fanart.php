@@ -31,7 +31,7 @@
 
       <section class="jumbotron text-center" style="background-color: rgb(163, 232, 255) ;" >
         <div class="container" >
-          <h1 class="jumbotron-heading" style="font-size: 100px;font-weight:700;">Livros</h1>  
+          <h1 class="jumbotron-heading" style="font-size: 100px;font-weight:700;">Fanart</h1>  
         </div>
       </section>
 
@@ -64,8 +64,8 @@
               <div class="card mb-4 box-shadow">
                 <img class="card-img-top" src=<?php echo "imagens/".$livro['foto']?> alt="Card image cap">
                 <div class="card-body">
-                <b><p class="card-text"><?php echo $livro['genero']?></p></b>
                   <p class="card-text"><?php echo $livro['sinopse']?></p>
+                  <p class="card-text"><?php echo $livro['genero']?></p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary"><a href="<?php echo 'ler_livro.php?id='. $livro['cod_livro']?>">Ler</button></a>

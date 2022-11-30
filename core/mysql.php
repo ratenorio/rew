@@ -100,8 +100,8 @@ function deleta(string $entidade, array $criterio = []) : bool
 
     foreach ($criterio as $expressao) {
         $dado = $expressao[count($expressao) -1];
-
-        $tipo[] = gettype($dado [0]);
+        $tipo[] = gettype($dado)[0];
+        
         $expressao[count($expressao) -1] = '?';
         $coringa_criterio[] = $expressao;
 
@@ -113,7 +113,7 @@ function deleta(string $entidade, array $criterio = []) : bool
 
     }
 
-    $instrucao = delete($entidade, $coringa_criterio);
+    $instrucao = delete($entidade, $coringa_criterio);    
 
     $conexao = conecta();
 
@@ -124,7 +124,7 @@ function deleta(string $entidade, array $criterio = []) : bool
         $comando .= "'" . implode('', $tipo) . "'";
         $comando .= ', $' . implode(', $', $campos_criterio);
         $comando .= ');';
-
+        echo $comando;
         eval($comando);
 
     }

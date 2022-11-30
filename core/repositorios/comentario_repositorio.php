@@ -16,31 +16,27 @@ foreach($_GET as $indice => $dado){
 
 if(isset($_FILES['foto']))
 {
-    echo 'livro';
+   echo 'comentario';
    $ext = strtolower(substr($_FILES['foto']['name'],-4)); //Pegando extensão do arquivo
    $foto_name = date("Y.m.d-H.i.s") . $ext; //Definindo um novo nome para o arquivo
    $dir = '../../imagens/'; //Diretório para uploads 
-   move_uploaded_file($_FILES['foto']['tmp_name'], $dir.$foto_name); //Fazer upload do arquivo
-   
+   move_uploaded_file($_FILES['foto']['tmp_name'], $dir.$foto_name); //Fazer upload do arquivo   
 } 
 
 
 switch($acao){
     case 'insert' :
         $dados = [
-            'nome'  => $nome,
-            'autor' => $autor,
-            'sinopse' => $sinopse,
-            'data_publicacao' => $data_publicacao,
+            'comentario'  => $comentario,
+            'fanart' => $foto_name,
             'cod_usuario'    => $_SESSION['login']['usuario']['cod_usuario'],
-            'cod_genero'    => $cod_genero,
-            'foto'      => $foto_name
+            'cod_livro'    => $cod_livro
         ];
 
         print_r($dados);
 
         insere(
-            'livro',
+            'comenta',
             $dados
         );
 
@@ -49,21 +45,18 @@ switch($acao){
         case 'update':
             $id = (int)$id;
             $dados = [
-                'nome'  => $nome,
-                'autor' => $autor,
-                'sinopse' => $sinopse,
-                'data_publicacao' => $data_publicacao,
+                'comentario'  => $comentario,
+                'fanart' => $foto_name,
                 'cod_usuario'    => $_SESSION['login']['usuario']['cod_usuario'],
-                'cod_genero'    => $cod_genero,
-                'foto'      => $foto_name
+                'cod_livro'    => $cod_livro,
             ];
 
             $criterio = [
-                ['cod_livro', '=', $id]
+                ['cod_comentario', '=', $id]
             ];
 
             atualiza(
-                'livro',
+                'comenta',
                 $dados,
                 $criterio
             );
@@ -74,15 +67,14 @@ switch($acao){
                 $id = (int)$id;        
         
                 $criterio = [
-                    ['cod_livro', '=', $id]
+                    ['cod_comentario', '=', $id]
                 ];
-        
                 deleta(
-                    'livro', 
+                    'comenta', 
                     $criterio
                 );  
                 break;          
     }
-header('Location: ../../listagem_livros.php');
+//header('Location: ../../listagem_livros.php');
 
 ?>

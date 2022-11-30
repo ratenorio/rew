@@ -42,6 +42,16 @@
             $criterio,
             'cod_capitulo asc'
         );
+        $comenta= buscar(
+            'comenta',
+            [
+                'cod_comentario',
+                'comentario',
+                'fanart',
+                '(select username from usuario where usuario.cod_usuario = comenta.cod_usuario) usuario'
+            ],
+            $criterio
+        );
 
     ?>    
 
@@ -60,9 +70,29 @@
                 echo '<p>'.nl2br($text).'</p>'; 
         ?>
     </div>
+
+
     <?php endforeach; ?>
     
 
+
+    <?php
+        foreach($comenta as $entidade):
+            echo "<h2 style='text-align:center;'>" . $entidade['comentario']."<br></h2>";
+            echo "<h2 style='text-align:center;'>" . $entidade['usuario']."<br></h2>";
+
+            
+                   
+    ?>
+<img class="card-img-top" src=<?php echo "imagens/".$entidade['fanart']?> alt="Card image cap">
+    
+    </div>
+
+
+    <?php endforeach; ?>    
+    <div>
+        <a href="comentario_formulario.php?cod_livro=<?php echo $id  ?>">Comentar</a>
+    </div>
     <script src="lib/bootstrap-4.2.1-dist/js/jquery-3.6.1.min.js"></script>
     <script src="lib/bootstrap-4.2.1-dist/js/bootstrap.bundle.min.js"></script>
     

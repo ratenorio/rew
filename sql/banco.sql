@@ -84,7 +84,7 @@ ALTER TABLE Comenta ADD CONSTRAINT FK_Comenta_Livro
 ALTER TABLE Capitulos ADD CONSTRAINT FK_Capitulos_Livro
     FOREIGN KEY (cod_livro)
     REFERENCES Livro (cod_livro)
-    ON DELETE RESTRICT;
+    ON DELETE CASCADE;
  
 ALTER TABLE Le ADD CONSTRAINT FK_Le_Livro
     FOREIGN KEY (cod_livro)
@@ -118,7 +118,7 @@ ALTER TABLE Denuncia ADD CONSTRAINT FK_Denuncia_Comenta
 
 
 
-insert into genero(nome) values('romance');
+insert into genero(nome) values('omance');
 insert into genero(nome) values('fantasia');
 insert into genero(nome) values('terror');
 insert into genero(nome) values('poema');

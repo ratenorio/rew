@@ -84,12 +84,16 @@
                             <td><?php echo $entidade['titulo'] ?></td>
                             <!--<td><?php echo $entidade['Editar'] ?></td>-->                            
                             <td><a href='capitulo_formulario.php?id=<?php echo $entidade['cod_capitulo']?>'>Editar</a></td>                     
-                            <td><a href='excluir_capitulo.php?cod_capitulo=<?php echo $entidade['cod_capitulo']?>'>Excluir</a></td>
+                            <td><a href='core/repositorios/capitulo_repositorio.php?acao=deleta&id=<?php echo $entidade['cod_capitulo']?>'>Excluir</a></td>
 
                         </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
+            </div>
+            <div class="text-right">
+                <a href="index.php"> <button class="btn btn"
+                                 type="submit"></button>Voltar</a>
             </div>
         </div>
         <div class="row">

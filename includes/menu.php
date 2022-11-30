@@ -12,17 +12,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
     <?php if(isset($_SESSION['login'])): ?> 
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Gêneros
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Romance</a>
-          <a class="dropdown-item" href="#">Poema</a>
-          <a class="dropdown-item" href="#">Terror</a>
-          <a class="dropdown-item" href="#">Outros</a>
-        </div>
-      </li>  
+    
       <?php endif ?>  
       <?php if(!isset($_SESSION['login'])): ?>                
       <li class="nav-item active">
@@ -49,7 +39,7 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="livro_formulario.php">Novo livro</a>
               <a class="dropdown-item" href="listagem_livros.php">Meus Livros</a>
-            </div>
+            </div>   
           </li>
     </ul>
   </div>

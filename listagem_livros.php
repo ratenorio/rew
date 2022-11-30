@@ -70,7 +70,8 @@
                             <td>Data publicação</td>
                             <td>Quantidade de capítulos</td>
                             <td>Editar</td> 
-                            <td>Inserir capítulos</td>                            
+                            <td>Inserir capítulos</td>
+                            <td>Excluir</td>                            
                         </tr>
                     </thead>
                     <tbody>
@@ -91,12 +92,17 @@
                             <td><a href='livro_formulario.php?id=<?php echo $entidade['cod_livro']?>
                             '>Editar</a></td>
                             <td><a href='capitulo_formulario.php?cod_livro=<?php echo $entidade['cod_livro']?>
-                            '>Inserir</a></td>                            
+                            '>Inserir</a></td>
+                            <td><a href='core/repositorios/livro_repositorio.php?acao=deleta&id=<?php echo $entidade['cod_livro']?>'>Excluir</a></td>                            
                             
                         </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
+            </div>
+            <div class="text-right" >
+                <a href="index.php"> <button class="btn btn"
+                                 type="submit"></button>Voltar</a>
             </div>
         </div>
         <div class="row">
