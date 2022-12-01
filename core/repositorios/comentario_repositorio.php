@@ -13,12 +13,13 @@ foreach($_POST as $indice => $dado){
 foreach($_GET as $indice => $dado){
     $$indice = limparDados($dado);
 }
-
-if(isset($_FILES['foto']))
+//echo ($_FILES['foto']['name']) . "teste <br>";
+$foto_name = '';
+if(!empty($_FILES['foto']['name']))
 {
    echo 'comentario';
    $ext = strtolower(substr($_FILES['foto']['name'],-4)); //Pegando extensão do arquivo
-   $foto_name = date("Y.m.d-H.i.s") . $ext; //Definindo um novo nome para o arquivo
+   $foto_name = date("Y.m.d-H.i.s") .'.'.  $ext; //Definindo um novo nome para o arquivo
    $dir = '../../imagens/'; //Diretório para uploads 
    move_uploaded_file($_FILES['foto']['tmp_name'], $dir.$foto_name); //Fazer upload do arquivo   
 } 
@@ -31,9 +32,7 @@ switch($acao){
             'fanart' => $foto_name,
             'cod_usuario'    => $_SESSION['login']['usuario']['cod_usuario'],
             'cod_livro'    => $cod_livro
-        ];
-
-        print_r($dados);
+        ];        
 
         insere(
             'comenta',
@@ -75,6 +74,6 @@ switch($acao){
                 );  
                 break;          
     }
-//header('Location: ../../listagem_livros.php');
+header('Location: ../../ler_livro.php?id='.$cod_livro);
 
 ?>

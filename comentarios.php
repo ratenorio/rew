@@ -23,7 +23,7 @@
         foreach($_GET as $indice => $dado){
             $$indice = limparDados($dado);
         }
-        $criterio = [['cod_livro', '=', $id]];
+        $criterio = [['cod_livro', '=', $cod_livro]];
 
         $livro = buscar(
             'livro',
@@ -31,45 +31,44 @@
                 $criterio);
         echo "<h1 style='text-align:center;'> ". $livro[0]['nome'] ."</h1>";
 
-        $capitulos = buscar(
-            'capitulos
-            ',
+        $comenta= buscar(
+            'comenta',
             [
-                'cod_capitulo',
-                'titulo',
-                'texto'
+                'cod_comentario',
+                'comentario',
+                'fanart',
+                '(select username from usuario where usuario.cod_usuario = comenta.cod_usuario) usuario'
             ],
-            $criterio,
-            'cod_capitulo asc'
+            $criterio
         );
-       
 
     ?>    
 
+  
+
     <?php
-        foreach($capitulos as $entidade):
-            echo "<h2 style='text-align:center;'>" . $entidade['titulo']."<br>";
+        foreach($comenta as $entidade):
+            echo "<h2 style='text-align:center;'>" . $entidade['usuario']."<br></h2>";
+            echo "<h2 style='text-align:center;'>" . $entidade['comentario']."<br></h2>";
+            
                    
     ?>
-
-    <div class="container" style="margin-left: 25%;; background-color:rgb(163, 232, 255); width:800px; border-radius:20px;">
+    <?php
+     echo $entidade['fanart'];
+       if(!empty(trim($entidade['fanart']))):
+    ?>
+        <img class="card-img-top" src=<?php echo "imagens/".$entidade['fanart']?> alt="Card image cap">
     
-        <?php            
-            $text = htmlspecialchars_decode($entidade['texto']);
-            $text = nl2br($text);            
-                //echo "<p style='text-align:center;'>" . $entidade['texto']."<br>";            
-                echo '<p>'.nl2br($text).'</p>'; 
-        ?>
-    </div>
+    <?php
+        endif;
+    ?>
 
 
-    <?php endforeach; ?>
+    <?php endforeach; ?>    
     <div>
         <a href="comentario_formulario.php?cod_livro=<?php echo $id  ?>">Comentar</a>
-        <a href="comentarios.php?cod_livro=<?php echo $id  ?>">Ver comentário</a>
     </div>
-       
-  
+   
     <script src="lib/bootstrap-4.2.1-dist/js/jquery-3.6.1.min.js"></script>
     <script src="lib/bootstrap-4.2.1-dist/js/bootstrap.bundle.min.js"></script>
     

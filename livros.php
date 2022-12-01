@@ -43,17 +43,32 @@
                 require_once 'core/sql.php';
                 require_once 'core/mysql.php';
 
+                foreach($_POST as $indice => $dado){
+                  $$indice = limparDados($dado);
+                }
+
                 foreach($_GET as $indice => $dado){
                     $$indice = limparDados($dado);
                 }
-                
+                $criterio = [
+                   
+                ] ;
+
+                if(!empty($busca)) {
+                  $criterio[] = [     
+                      'NOME',
+                      'like',
+                      "%{$busca}%"
+                  ];
+                }
                 $livros = buscar(
+
                             'livro',
                             ['*',
                             '(select nome
                             from genero
                             where genero.cod_genero = livro.cod_genero) as genero'],
-                            []);
+                            $criterio);
           ?>
           <div class="row">
           <?php
