@@ -80,6 +80,7 @@
                 <img class="card-img-top" src=<?php echo "imagens/".$livro['foto']?> alt="Card image cap">
                 <div class="card-body">
                 <b><p class="card-text"><?php echo $livro['genero']?></p></b>
+                <p class="card-text"><?php echo $livro['nome']?></p>
                   <p class="card-text"><?php echo $livro['sinopse']?></p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">

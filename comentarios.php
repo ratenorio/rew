@@ -10,10 +10,12 @@
     <title>Document</title>
 </head>
 <body>
+<a href="index.php" style="margin-left: 50px;border-radius: 20px; background: rgb(163, 232, 255) ;padding: 10px;width: 70%;border: none; text-decoration: none; color: black;">Voltar</a></b>
             <?php
             include 'includes/valida_login.php';
             ?>
 
+    
     <?php
         require_once 'includes/funcoes.php';
         require_once 'core/conexao_mysql.php';
@@ -42,14 +44,15 @@
             $criterio
         );
 
+
     ?>    
 
   
-
+    <div style="width: 300px; border-radius: 15px; background: rgb(163, 232, 255);padding: 50px;margin: 20px;">
     <?php
         foreach($comenta as $entidade):
-            echo "<h2 style='text-align:center;'>" . $entidade['usuario']."<br></h2>";
-            echo "<h2 style='text-align:center;'>" . $entidade['comentario']."<br></h2>";
+            echo "<h2 style='text-align:center;'> Usuário: " . $entidade['usuario']."<br>";
+            echo "<h2 style='text-align:center;'> Comentário: " . $entidade['comentario']."<br></h2>";
             
                    
     ?>
@@ -62,12 +65,9 @@
     <?php
         endif;
     ?>
-
+    </div>
 
     <?php endforeach; ?>    
-    <div>
-        <a href="comentario_formulario.php?cod_livro=<?php echo $id  ?>">Comentar</a>
-    </div>
    
     <script src="lib/bootstrap-4.2.1-dist/js/jquery-3.6.1.min.js"></script>
     <script src="lib/bootstrap-4.2.1-dist/js/bootstrap.bundle.min.js"></script>

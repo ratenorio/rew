@@ -10,6 +10,9 @@
     <title>Document</title>
 </head>
 <body>
+
+    <b><a href="index.php" style="margin-left: 50px;border-radius: 20px; background: rgb(163, 232, 255) ;padding: 10px;width: 70%;border: none; text-decoration: none; color: black;">Voltar</a></b>
+
             <?php
             include 'includes/valida_login.php';
             ?>
@@ -30,6 +33,8 @@
             ['*'],
                 $criterio);
         echo "<h1 style='text-align:center;'> ". $livro[0]['nome'] ."</h1>";
+        
+
 
         $capitulos = buscar(
             'capitulos
@@ -52,7 +57,7 @@
                    
     ?>
 
-    <div class="container" style="margin-left: 25%;; background-color:rgb(163, 232, 255); width:800px; border-radius:20px;">
+    <div class="container" style="margin-left: 25%; background-color:rgb(163, 232, 255); width:1000px; border-radius:20px;">
     
         <?php            
             $text = htmlspecialchars_decode($entidade['texto']);
@@ -64,11 +69,14 @@
 
 
     <?php endforeach; ?>
-    <div>
-        <a href="comentario_formulario.php?cod_livro=<?php echo $id  ?>">Comentarrrr</a>
-        <a href="comentarios.php?cod_livro=<?php echo $id  ?>">Ver comentário
-    </a>
-    </div>
+            
+        
+    
+        <div>
+        <a href="comentario_formulario.php?cod_livro=<?php echo $id  ?>" style="border-radius: 20px; background: rgb(163, 232, 255);padding: 10px;width: 70%;border: none;margin-right: 10px; text-decoration: none; color: black">Comentar</a>
+        <a href="comentarios.php?cod_livro=<?php echo $id  ?>" style="border-radius: 20px; background: rgb(163, 232, 255);padding: 10px;width: 70%;border: none;margin-right: 10px; text-decoration: none; color: black">Ver comentário</a>
+        </div>
+  
        
   
     <script src="lib/bootstrap-4.2.1-dist/js/jquery-3.6.1.min.js"></script>

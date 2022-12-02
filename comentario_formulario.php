@@ -47,7 +47,7 @@
                         $entidade = $retorno[0];
                     }
                 ?>
-                <h2>Comentario</h2>
+                <h2>Comentário</h2>
                 <form method="post" action="core/repositorios/comentario_repositorio.php" enctype="multipart/form-data">
                     <input type="hidden" name="acao"
                             value="<?php echo empty($id) ? 'insert' : 'update' ?>">
@@ -56,7 +56,7 @@
                     <input type="hidden" name="id"
                             value="<?php echo $entidade['cod_comentario'] ?? '' ?>">
                     <div class="form-group">
-                        <label for="comentario">Comentario:</label>
+                        <label for="comentario">Comentário:</label>
                         <input class="form-control" type="text"
                             require="required" id="comentario" name="comentario"
                             value="<?php echo $entidade['comentario'] ?? '' ?>">
