@@ -66,7 +66,8 @@
     <?php endforeach; ?>
     <div>
         <a href="comentario_formulario.php?cod_livro=<?php echo $id  ?>">Comentar</a>
-        <a href="comentarios.php?cod_livro=<?php echo $id  ?>">Ver comentário</a>
+        <a href="comentarios.php?cod_livro=<?php echo $id  ?>">Ver comentário
+    </a>
     </div>
        
   
