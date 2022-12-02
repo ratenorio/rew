@@ -72,7 +72,7 @@
             <p class="lead">Essa plataforma permite que você possa ler e se tornar autor de suas próprias histórias.<br>
             Já viram as nossas coleções? <br>
             Clique aqui e não perca mais tempo.</p>
-            <div class="botao1"><p><a class="btn btn-dark btn-left" href="livros.php" role="button">Leia agora</a></p></div>
+            <div class="botao1"><p><a class="btn btn-dark btn-left" href="livros.php" role="button" style="margin-left: 30%;">Leia agora</a></p></div>
             </div>
           </div>
 
