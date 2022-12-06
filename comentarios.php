@@ -10,6 +10,7 @@
     <title>Document</title>
 </head>
 <body>
+
 <a href="index.php" style="margin-left: 50px;border-radius: 20px; background: rgb(163, 232, 255) ;padding: 10px;width: 70%;border: none; text-decoration: none; color: black;">Voltar</a></b>
             <?php
             include 'includes/valida_login.php';
@@ -32,7 +33,7 @@
             ['*'],
                 $criterio);
         echo "<h1 style='text-align:center;'> ". $livro[0]['nome'] ."</h1>";
-
+        
         $comenta= buscar(
             'comenta',
             [
@@ -46,28 +47,27 @@
 
 
     ?>    
-
+    <a href="comentario_formulario.php?cod_livro=<?php echo $cod_livro  ?>" style="border-radius: 20px; background: rgb(163, 232, 255);padding: 10px;width: 70%;border: none;margin-right: 10px; text-decoration: none; color: black">Comentar</a>
   
-    <div style="width: 300px; border-radius: 15px; background: rgb(163, 232, 255);padding: 50px;margin: 20px;">
+    
     <?php
-        foreach($comenta as $entidade):
-            echo "<h2 style='text-align:center;'> Usuário: " . $entidade['usuario']."<br>";
-            echo "<h2 style='text-align:center;'> Comentário: " . $entidade['comentario']."<br></h2>";
-            
-                   
+        foreach($comenta as $entidade):              
     ?>
+    <div style="width: 300px; border-radius: 15px; background: rgb(163, 232, 255);padding: 50px;margin: 20px;">
+        <h2 style='text-align:center;'> "Usuário:  <?php echo $entidade['usuario']?>"<br>
+        <h2 style='text-align:center;'> "Comentário: <?php echo $entidade['comentario']?>"<br></h2>           
+    
     <?php
-     echo $entidade['fanart'];
+        //echo $entidade['fanart'];
        if(!empty(trim($entidade['fanart']))):
     ?>
         <img class="card-img-top" src=<?php echo "imagens/".$entidade['fanart']?> alt="Card image cap">
-    
-    <?php
-        endif;
-    ?>
+           
+    <?php endif;?>
     </div>
-
-    <?php endforeach; ?>    
+    <?php endforeach;?> 
+    
+       
    
     <script src="lib/bootstrap-4.2.1-dist/js/jquery-3.6.1.min.js"></script>
     <script src="lib/bootstrap-4.2.1-dist/js/bootstrap.bundle.min.js"></script>

@@ -26,6 +26,10 @@
         foreach($_GET as $indice => $dado){
             $$indice = limparDados($dado);
         }
+        if(!isset($id)){
+            header('location: livros.php');
+            exit;
+        }
         $criterio = [['cod_livro', '=', $id]];
 
         $livro = buscar(
