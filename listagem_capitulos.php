@@ -30,7 +30,6 @@
                     foreach($_GET as $indice => $dado){
                         $$indice = limparDados($dado);
                     }
-                    $id = 1;
                     $livros = buscar(
                         'livro',
                         ['*'],
